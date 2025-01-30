@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta property="og:title" content="Camille Secrets">
+  <meta property="og:description" content="Esta é a págin da Startup Camille Secrets">
+  <meta property="og:image" content="assets/image/camillesecrets.jpg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camille Secrets</title>
+  <link rel="icon" href="assets/imagem/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&family=Poppins:wght@400;700&family=Oswald:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+        }
+
+    .typing-container {
+      display: flex;
+      min-width: 100%;
+      max-width: 100%;
+      margin-left: 50px;
+      white-space: nowrap;
+      overflow: hidden;
+      margin-top: 20px;
+      height: 200px;
+    }
+
+    .typing {
+      display: inline;
+      color: white;
+      animation: blink-caret 0.75s infinite;
+    }
+
+    @keyframes blink-caret {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: -1;
+    }
+
+    .h5 {
+      color: white;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      font-family: 'Poppins', sans-serif;
+      justify-content: center;
+      align-items: center;
+      height: calc(100% - 200px);
+      color: white;
+      text-align: center;
+      margin-top: 150px;
+    }
+
+    .content h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    @media (max-width: 768px) {
+      .content h1 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .content h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .custom-navbar {
+      
+      background-color: #4CB5E4;
+      color: white;
+    }
+
+    .nav-link {
+      color: white;
+    }
+
+    .nav-link:hover{
+      color: gray;
+    }
+    .nav-link[data-active="true"] {
+  color: black;
+
+}
+    .camille-img {
+      text-align: left;
+      margin-top: 100px;
+      margin-left: 50px;
+      width: auto;
+      max-width: 100%;
+      display: block;
+    }
+    .white-section {
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 50px 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  .black-section {
+    background-color: rgba(0, 0, 0, 0.9); 
+    padding: 50px 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  .image-container {
+  margin-left: 20px;
+  display: inline-block; /* Garante que a div ocupe apenas o espaço necessário */
+}
+.image-container2 {
+  margin-left: 20px;
+  display: inline-block; /* Garante que a div ocupe apenas o espaço necessário */
+}
+img {
+  display: block; /* Evita que a imagem tenha margens automáticas */
+  width: auto; /* Garantir que a imagem tenha o tamanho correto */
+  height: auto; /* Ajusta a altura conforme necessário */
+}
+  .image-1{
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    margin-top: 40px;
+    display: inline-block;
+  }
+  .image-2{
+    
+
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    margin-top: 40px;
+    display: inline-block;
+  }
+  .fade-in-image {
+            opacity: 0;
+            transform: translateX(-100px); /* Começa deslocado para a esquerda */
+            transition: opacity 2s ease-in-out, transform 2s ease-in-out; /* Transição suave */
+        }
+
+        .fade-in {
+            opacity: 1;
+            transform: translateX(0); /* Chega à posição final */
+        }
+        .fade-in-image2 {
+  opacity: 0;
+  transform: translateX(100px); /* Começa deslocado para a direita */
+  transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+
+.fade-in2 {
+  opacity: 1;
+  transform: translateX(0); /* Chega à posição final */
+}
+
+  #proposta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh; /* Ocupa pelo menos toda a altura da tela */
+            padding-top: 10px; /* Espaço no topo */
+        }
+        #home {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh; /* Ocupa pelo menos toda a altura da tela */
+            padding-top: 10px; /* Espaço no topo */
+        }
+        #demonstracao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh; /* Ocupa pelo menos toda a altura da tela */
+            padding-top: 10px; /* Espaço no topo */
+        }
+        /* Faz a div .content ficar colada no topo */
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* Mantém os itens no topo */
+            width: 100%; /* Garante que ocupe toda a largura */
+        }
+
+        .image-container {
+    display: flex;         /* Alinha os itens lado a lado */
+    align-items: center;   /* Alinha verticalmente */
+    gap: 20px;             /* Espaço entre a imagem e o texto */
+    flex-wrap: wrap;       /* Permite que o texto vá para baixo se necessário */
+}
+.image-container2 {
+    display: flex;         /* Alinha os itens lado a lado */
+    align-items: center;   /* Alinha verticalmente */
+    gap: 20px;             /* Espaço entre a imagem e o texto */
+    flex-wrap: wrap;       /* Permite que o texto vá para baixo se necessário */
+}
+.image-container2 img {
+    max-width: 50%; /* Garante que a imagem não ocupe toda a largura */
+    height: auto;   /* Mantém a proporção da imagem */
+}
+.image-container img {
+    max-width: 50%; /* Garante que a imagem não ocupe toda a largura */
+    height: auto;   /* Mantém a proporção da imagem */
+}
+
+
+.section {
+            padding: 50px 20px;  /* Adiciona espaçamento interno */
+}
+.sd{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin-top: -30px;
+  text-align: center;
+}
+.verificado{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+.equipe{
+  width: 100px;
+  height: 100px;
+}
+.equipe1{
+  width: 500px;
+  height: 500px;
+}
+.equipe2{
+  width: 500px;
+  height: 500px;
+}
+footer{
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  text-align: center;
+}
+.loader-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(225, 225, 225, 1); /* Fundo semi-transparente */
+      z-index: 9999; /* Garante que o loader fique por cima do conteúdo */
+    }
+
+    /* Ocultar o loader após o carregamento */
+    .loader-container.hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="loader-container" id="loader">
+    <img src="assets/imagem/loader.gif" class="img-fluid" alt="Loading..." />
+  </div>
+  <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="assets/imagem/navbar.png" class="img-fluid" height="50px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link"  href="#home">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#proposta">Proposta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#demostracao">Demostração</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#equipe">Equipe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contato">Contatos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="section"> 
+    <div class="d-flex justify-content-start align-self-start">
+      <img src="assets/imagem/camille.png" class="camille-img img-fluid" alt="Imagem no topo">
+    </div>
+    <div class="typing-container">
+      <h3 id="typed-text" class="typing"></h3>
+    </div> 
+  
+    <video class="video-background" autoplay muted loop>
+      <source src="assets/imagem/bg.mp4" type="video/mp4">
+      Seu navegador não suporta vídeos HTML5.
+    </video>
+  
+    <div class="overlay"></div>
+  
+    <div class="content" style="margin-top: -30px;">
+      <div>
+        <h1>Startup Camille Secrets</h1>
+        <h4>Aqui eu tento transparecer o começo da minha Startup</h4>
+  
+        <p class="lead">Onde só é a Arché de um infinito de possibilidades</p>
+        <a href="#" class="btn btn-primary btn-lg">Saiba Mais</a>
+      </div>
+    </div>
+  </section>
+  <section id="proposta" class="white-section section">
+    <div class="content" style="margin-top: 0px;">
+      <div class="d-flex align-items-center">
+        <img src="assets/imagem/proposta.png" class="img-fluid" alt="Proposta">
+        <h1 class="text-black ms-3">Proposta da minha Startup</h1>
+    </div>
+    <div class="image-container d-flex justify-content-center">
+      <img src="assets/imagem/foto1.jpg" width="500" height="500" alt="Imagem com efeito" 
+           class="fade-in-image image-1 img-fluid">
+      
+      <h5 style="color: black; margin-top: 40px;">
+        A proposta é integrar tecnologias do<br>
+        futuro e aprimorá-las por meio de soluções<br> 
+        inovadoras, com foco na facilidade de uso<br>
+        das inteligências artificiais através de<br>
+        prompts, e tem o potencial de transformar<br>
+        significativamente a experiência do usuário.<br>
+        Ao garantir layouts intuitivos e resultados<br>
+        melhores, essa abordagem busca conectar o ser<br>
+        humano às novas e abrangentes tecnologias de<br>
+        forma mais acessível e eficaz. A combinação de<br>
+        tecnologia avançada com uma interface amigável e<br>
+        intuitiva pode facilitar a adoção e interação das<br>
+        com essas ferramentas, prometendo uma<br>
+        integração harmoniosa entre humanos e máquinas<br>
+        no dia a dia.
+
+      </h5>
+  </div>
+  <div class="image-container2 d-flex justify-content-center">
+    <h4 style="color: black; margin-top: 40px;">
+      Arrecadação de capital, como isso vai<br>
+      funcionar. Hoje em dia nos deparamos<br>
+      como várias aplicações pagas, certo?<br>
+      Eu achei um meio de fazer capital<br>
+      sem limitar o usuário a pagar uma aplicação.<br>
+      Isso parece meio que impossível, porém<br>
+      pode ser bem eficiente e simples, o método que<br>
+      eu vou usar. Como isso? Vocês me perguntariam,<br>
+      e eu diria por meio de de ADS(Publicidade).
+    </h4>
+    <img src="assets/imagem/foto2.jpg" width="500" height="500" alt="Imagem com efeito" 
+         class="fade-in-image2 image-2  img-fluid">
+  </div>
+    </div>
+</section>
+<section class="black-section section d-flex flex-column" id="demostracao">
+  <!-- Primeira div (Imagem + H1) -->
+  <div class="text-center mb-4">
+    <img src="assets/imagem/demonstrcao.png" class="sd" width="100" height="100">
+    <h1 style="color: white; margin-top: 20px; display: inline-block;">Demonstração e especificação do projeto</h1>
+  </div>
+
+  <!-- Segunda div (Imagem + H1) -->
+  <div class="text-center">
+    <img src="assets/imagem/verificado.png" style="margin-top: -20px;" class="verificado">
+    <h1 style="color: white; margin-top: 20px; display: inline-block;">Projetos realizados e em testes</h1>
+  </div>
+  <div class="text-center">
+    
+    <h5 style="color: white;">Os projetos realizados e em teste, são uma simplificação de uso para pessoas comuns<br>
+    da sociedade que não exploram a gama de recursos que a inteligência artificial tem, usando a versão gratuita<br>
+    do gemini já consegui realizar um layout criativo e chamativo que calcula a quantidade de calorias só com uma<br>
+    simples foto do prato de comida, eu fiquei imaginando como seria mais preciso com um recurso do vision pro<br>
+    uma barreira que encontrei a frente e é um leque para área da saúde, seria calcular medidas antropométrica<br>
+    para a pessoa acompanhar o ritimo de estética e avanço nos desafios de saúde e beleza<br>
+    porém, o recurso gratuito do gemini não deixou eu fazer isso. O Link para o site<br>
+    da aplicação do site que calcula a estimativa do prato de comida é esse <a href="https://camillesecrets.github.io/App/">Clique aqui para ver</a> 
+    .</h5>
+  </div>
+  <div class="text-center">
+    <img src="assets/imagem/analise.png" style="margin-top: -20px;" class="verificado">
+    <h1 style="color: white; margin-top: 20px; display: inline-block;">Rercusos a serem explorados pela nossa Startup</h1>
+  </div>
+  <div class="text-center">
+    
+    <h5 style="color: white;">A nossa Startup não se resume em uma aplicação apenas e sim um leque que pode ter o público diversificado<br>
+      como nos campos de psicologia, psiquiatria e também esoterismos, todos esses são projetos que visão, por meio de programação<br>
+      e prompts da inteligência artificial trazer o que os especialistas precisam ler e estudar e a nossa Startup fornecer de forma<br>
+      simples. O que a um tempo atrás não era possível, agora graças as tecnologias do futuro inovar e transformar a vida das pessoas.
+    </h5>
+  </div>
+</section>
+<section id="equipe" class="white-section section text-center">
+  <div class="content" style="margin-top: 0px;">
+    <div class="d-flex align-items-center">
+      <img src="assets/imagem/equipe.png" class="img-fluid equipe" alt="Proposta">
+      <h1 class="text-black ms-3">A nossa equipe</h1>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      
+      <!-- Primeiro membro da equipe -->
+      <div class="col-md-4 text-center">
+        <img src="assets/imagem/perfil1.png" class="img-fluid" alt="Equipe 1">
+        <h3 class="text-black mt-3">Camille sócia ânonima e inspiradora da Startup</h3>
+        <h5 class="text-muted">Managing Partner</h5>
+      </div>
+
+      <!-- Segundo membro da equipe -->
+      <div class="col-md-4 text-center">
+        <img src="assets/imagem/perfil2.png" class="img-fluid" alt="Equipe 2">
+        <h3 class="text-black mt-3">Icaro Rodrigues Shimazu</h3>
+        <h5 class="text-muted">CEO e CTO</h5>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="black-section section" id="contato">
+  <div class="content" style="margin-top: 0px;">
+    <div class="d-flex align-items-center">
+      <img src="assets/imagem/email.png" class="img-fluid equipe" alt="Proposta">
+      <h1 class="text-white ms-3">Contado com a Startup</h1>
+  </div>
+  <div style="margin-top: 20px;" class="d-flex align-items-center">
+    <h1 class="text-white ms-3">icaro3677@gmail.com</h1>
+</div>
+</section>
+<footer>&copy; Copyright Camille Secrets 2025</footer>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+      const navLinks = document.querySelectorAll(".nav-link");
+      const sections = document.querySelectorAll(".section");
+
+      function updateActiveLink() {
+          let currentSection = "";
+          sections.forEach((section) => {
+              const sectionTop = section.offsetTop - 100; // Ajuste o offset
+              const sectionBottom = sectionTop + section.offsetHeight;
+
+              if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+                  currentSection = section.getAttribute("id");
+              }
+          });
+
+          navLinks.forEach((link) => {
+              if (link.getAttribute("href").substring(1) === currentSection) {
+                  link.classList.add("active");
+              } else {
+                  link.classList.remove("active");
+              }
+          });
+      }
+
+      window.addEventListener("scroll", updateActiveLink);
+      updateActiveLink(); // Garante que o link correto esteja ativo ao carregar a página
+
+      // Adicionando scroll suave e garantindo que o active não persista no clique
+      navLinks.forEach(link => {
+          link.addEventListener('click', function(event) {
+              event.preventDefault();
+
+              // Remove a classe active antes de fazer o scroll
+              navLinks.forEach(link => link.classList.remove('active'));
+
+              const targetId = this.getAttribute('href');
+              const targetSection = document.querySelector(targetId);
+
+              // Faz o scroll suave para a seção
+              targetSection.scrollIntoView({ behavior: 'smooth' });
+
+              // Atualiza a navegação para que a classe active seja aplicada corretamente após o scroll
+              setTimeout(updateActiveLink, 0); // Espera o scroll terminar para aplicar a classe active corretamente
+          });
+      });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+      const image = document.querySelector(".fade-in-image");
+
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  entry.target.classList.add("fade-in");
+                  observer.unobserve(entry.target); // Remove a observação após ativar o efeito
+              }
+          });
+      }, { threshold: 0.5 }); // 50% da imagem precisa estar visível para ativar
+
+      observer.observe(image);
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+      const image = document.querySelector(".fade-in-image2");
+
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  entry.target.classList.add("fade-in2");
+                  observer.unobserve(entry.target); // Remove a observação após ativar o efeito
+              }
+          });
+      }, { threshold: 0.5 }); // 50% da imagem precisa estar visível para ativar
+
+      observer.observe(image);
+  });
+</script>
+<script>
+  const text = "Solucionando desafios<br>com a inteligência do futuro";
+  const element = document.getElementById("typed-text");
+  let i = 0;
+
+  function typeText() {
+    if (i < text.length) {
+      if (text.substring(i, i + 4) === "<br>") {
+        const brElement = document.createElement("br");
+        element.appendChild(brElement);
+        i += 4;
+      } else {
+        element.innerHTML += text.charAt(i);
+        i++;
+      }
+      setTimeout(typeText, 100);
+    }
+  }
+
+  element.innerHTML = ""; // Reinicia o texto ao carregar a página
+  typeText();
+</script>
+<script>
+  // Simulando um carregamento (por exemplo, esperando a página carregar ou dados assíncronos)
+  window.onload = function() {
+    // Ocultar o loader assim que a página for completamente carregada
+    document.getElementById("loader").classList.add("hidden");
+  };
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
