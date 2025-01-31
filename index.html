@@ -345,9 +345,9 @@ footer{
         <h4>Aqui eu tento transparecer o começo da minha Startup</h4>
   
         <p class="lead">Onde só é a Arché de um infinito de possibilidades</p>
-<button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#infoModal">
-    Sobre a Startup
-</button>
+   <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#infoModal">
+        Sobre a Startup
+    </button>
 
 <!-- Vídeo de fundo -->
 <video class="video-background" autoplay muted loop>
@@ -356,22 +356,29 @@ footer{
 </video>
 
 <!-- Modal -->
-<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="cs" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-center" id="modalTitle">Apresentação da Startup</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center" id="modalTitle">Apresentação da Startup</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Embedding o iframe dentro do modal -->
+                    <div class="ratio ratio-16x9">
+                        <iframe 
+                            src="https://www.youtube.com/embed/sIaJwmzJoHM?modestbranding=1&rel=0" 
+                            allow="autoplay; encrypted-media" 
+                            frameborder="0" 
+                            width="560" 
+                            height="315">
+                        </iframe>
+                    </div>
+                </div>
             </div>
-            <div class="modal-body">
-                <div class="ratio ratio-16x9">
-             <iframe 
-    src="https://www.youtube.com/embed/sIaJwmzJoHM?modestbranding=1&rel=0" 
-    allow="autoplay; encrypted-media" 
-    frameborder="0" 
-    width="560" 
-    height="315">
-</iframe>
+        </div>
+    </div>
+
                 </div>
             </div>
             <div class="modal-footer">
@@ -619,7 +626,7 @@ footer{
     document.getElementById("loader").classList.add("hidden");
   };
 </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
