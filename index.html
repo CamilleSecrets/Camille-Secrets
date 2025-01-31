@@ -344,7 +344,34 @@ footer{
         <h4>Aqui eu tento transparecer o começo da minha Startup</h4>
   
         <p class="lead">Onde só é a Arché de um infinito de possibilidades</p>
-        <a href="#" class="btn btn-primary btn-lg">Saiba Mais</a>
+<button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#infoModal">
+          Sobre a Startup
+      </button>
+         <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title text-center" id="modalTitle">Apresentação da Startup</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <div class="ratio ratio-16x9">
+                      <iframe src="https://www.youtube.com/embed/sIaJwmzJoHM?si=UF1_sceD7KYmB9OW" 
+                          title="YouTube video player" 
+                          frameborder="0" 
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                          referrerpolicy="strict-origin-when-cross-origin" 
+                          allowfullscreen>
+                      </iframe>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  
       </div>
     </div>
   </section>
