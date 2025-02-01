@@ -16,8 +16,12 @@
       padding: 0;
       overflow-x: hidden;
         }
-    .navbar-nav {
-  margin-left: auto !important;  /* Usa a margem automática à esquerda */
+.navbar-collapse {
+  width: 100%;
+}
+
+.navbar-nav {
+  margin-left: auto;
 }
 
     .typing-container {
@@ -309,7 +313,8 @@ footer{
   <div class="loader-container" id="loader">
     <img src="assets/imagem/loader.gif" class="img-fluid" alt="Loading..." />
   </div>
-  <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+ <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+  <div class="container">
     <a class="navbar-brand" href="#">
       <img src="assets/imagem/navbar.png" class="img-fluid" height="50px">
     </a>
@@ -342,6 +347,7 @@ footer{
         </li>
       </ul>
     </div>
+  </div>
 </nav>
 
   <section id="home" class="section"> 
