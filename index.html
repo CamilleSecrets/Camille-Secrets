@@ -288,6 +288,18 @@ footer{
     .loader-container.hidden {
       display: none;
     }
+    .dropdown-menu {
+    min-width: 200px; /* Define a largura mínima do menu dropdown */
+  }
+
+  .nav-link {
+    font-weight: bold;
+  }
+
+  .dropdown-item:hover {
+    background-color: #007bff;
+    color: white;
+  }
   </style>
 </head>
 <body>
@@ -308,9 +320,16 @@ footer{
           <li class="nav-item">
             <a class="nav-link" href="#proposta">Proposta</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#demostracao">Demostração</a>
-          </li>
+           <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="dropdownDemonstration" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Demonstração
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="dropdownDemonstration">
+      <li><a class="dropdown-item" href="https://camillesecrets.github.io/App2/">Interpretador de sonho</a></li>
+      <li><a class="dropdown-item" href="https://camillesecrets.github.io/App/">Contador de calorias</a></li>
+      <li><a class="dropdown-item" href="#demonstracao">Especificações de Demonstração</a></li>
+    </ul>
+  </li>
           <li class="nav-item">
             <a class="nav-link" href="#equipe">Equipe</a>
           </li>
