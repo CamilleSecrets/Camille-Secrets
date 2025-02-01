@@ -556,27 +556,26 @@ footer{
       observer.observe(image);
   });
 </script>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-      const image2 = document.querySelector(".fade-in-image2");
+document.addEventListener("DOMContentLoaded", () => {
+    const image2 = document.querySelector(".fade-in-image2");
 
-      if (!image) {
-          console.error("Erro: O elemento com a classe '.fade-in-image2' não foi encontrado.");
-          return;
-      }
+    if (!image2) {
+        console.error("Erro: O elemento com a classe '.fade-in-image2' não foi encontrado.");
+        return;
+    }
 
-      const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                  entry.target.classList.add("fade-in2");
-                  observer.unobserve(entry.target); // Para de observar após a ativação
-              }
-          });
-      }, { threshold: 0.5 }); // 50% da imagem precisa estar visível para ativar
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("fade-in2");
+                observer.unobserve(entry.target); // Para de observar após a ativação
+            }
+        });
+    }, { threshold: 0.5 }); // 50% da imagem precisa estar visível para ativar
 
-      observer.observe(image2);
-  });
-</script>
+    observer.observe(image2);
+});
+
 <script>
   const text = "Solucionando desafios<br>com a inteligência do futuro";
   const element = document.getElementById("typed-text");
