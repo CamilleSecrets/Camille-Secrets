@@ -588,12 +588,20 @@ footer{
   });
 </script>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const image = document.getElementById("image2");
-  setTimeout(() => {
-    image.classList.add("fade-in2"); // Adiciona a classe para iniciar o efeito
-  }, 500); // Pequeno delay para garantir a transição
-});
+  document.addEventListener("DOMContentLoaded", () => {
+      const image = document.querySelector(".fade-in-image2");
+
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  entry.target.classList.add("fade-in2");
+                  observer.unobserve(entry.target); // Remove a observação após ativar o efeito
+              }
+          });
+      }, { threshold: 0.5 }); // 50% da imagem precisa estar visível para ativar
+
+      observer.observe(image);
+  });
 </script>
 <script>
   const text = "Solucionando desafios<br>com a inteligência do futuro";
