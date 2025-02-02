@@ -307,22 +307,23 @@ footer{
     background-color: #007bff;
     color: white;
   }
-    @media (max-width: 991px) { /* Aplica apenas para telas menores que lg */
+ @media (max-width: 991px) { 
   .navbar-collapse {
     position: absolute;
-        top: 100%; /* Garante que o menu apareça abaixo do botão toggle */
-    width: 40%; /* Garante que o menu ocupa apenas a largura necessária */
-    text-aling: right;
-    max-height: 500px; /* Defina o tamanho desejado */
-    overflow-y: auto; /* Permite rolagem caso o conteúdo ultrapasse o tamanho */
-    background: #4CB5E4; /* Caso precise de um fundo */
+    top: 100%; /* Garante que o menu apareça abaixo do botão toggle */
+    right: 0; /* Alinha o menu à direita */
+    left: auto; /* Remove a configuração de alinhamento à esquerda */
+    width: 37%; /* Define a largura do menu */
+    max-height: 500px; /* Define um tamanho máximo */
+    overflow-y: auto; /* Permite rolagem caso necessário */
+    background: #4CB5E4; /* Define a cor de fundo */
     padding: 10px; /* Espaçamento interno */
+    z-index: 1000; /* Garante que o menu apareça sobre os outros elementos */
   }
-        .navbar-nav {
-    max-height: 300px; /* Define um tamanho máximo para a lista do menu */
-    z-index: 1000; /* Garante que o menu apareça sobre os outros elementos */  }
 
-}
+  .navbar-nav {
+    text-align: right; /* Alinha os itens do menu à direita */
+  }}
   </style>
 </head>
 <body>
