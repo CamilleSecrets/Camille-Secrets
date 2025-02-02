@@ -309,16 +309,16 @@ footer{
   }
     @media (max-width: 991px) { /* Aplica apenas para telas menores que lg */
   .navbar-collapse {
-        width: 60%; /* Define um tamanho menor */
-    max-height: 300px; /* Defina o tamanho desejado */
+    position: absolute;
+    width: 100%; /* Garante que o menu ocupa apenas a largura necessária */
+    max-height: 500px; /* Defina o tamanho desejado */
     overflow-y: auto; /* Permite rolagem caso o conteúdo ultrapasse o tamanho */
     background: #4CB5E4; /* Caso precise de um fundo */
     padding: 10px; /* Espaçamento interno */
   }
         .navbar-nav {
     max-height: 300px; /* Define um tamanho máximo para a lista do menu */
-    overflow-y: auto; /* Adiciona rolagem se o conteúdo for maior */
-  }
+    z-index: 1000; /* Garante que o menu apareça sobre os outros elementos */  }
 
 }
   </style>
