@@ -307,6 +307,14 @@ footer{
     background-color: #007bff;
     color: white;
   }
+    @media (max-width: 991px) { /* Aplica apenas para telas menores que lg */
+  .navbar-collapse {
+    max-height: 300px; /* Defina o tamanho desejado */
+    overflow-y: auto; /* Permite rolagem caso o conteúdo ultrapasse o tamanho */
+    background: #4CB5E4; /* Caso precise de um fundo */
+    padding: 10px; /* Espaçamento interno */
+  }
+}
   </style>
 </head>
 <body>
