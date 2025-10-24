@@ -588,45 +588,11 @@ footer{
     
      <div style="text-aling=center;">
            <h1 class="text-white text-center" style="margim-top:50px;">História da Startup</h1>
-                    <div class="ratio ratio-16x9" style="max-width: 560px; width: 100%; height: auto;">
-     <div class="video-container">
-    <video class="video-camile" id="camilleVideo" muted loop playsinline webkit-playsinline>
-      <source src="assets/imagem/Camillle.mp4" type="video/mp4">
-      Seu navegador não suporta vídeos HTML5.
-    </video>
-
-    <button class="play-btn" id="playButton">▶️</button>
-  </div>
-                      
-</div>
+           <div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1130375712?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="camillle"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
      </div>
 </section>
 <footer>&copy; Copyright Camille Secrets 2025</footer>
-    <script>
-    const video = document.getElementById('camilleVideo');
-    const playButton = document.getElementById('playButton');
 
-    playButton.addEventListener('click', () => {
-      if (video.paused) {
-        video.play();
-        playButton.classList.add('hidden');
-      } else {
-        video.pause();
-        playButton.classList.remove('hidden');
-      }
-    });
-
-    video.addEventListener('click', () => {
-      if (!video.paused) {
-        video.pause();
-        playButton.classList.remove('hidden');
-      }
-    });
-
-    video.addEventListener('play', () => {
-      playButton.classList.add('hidden');
-    });
-  </script>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
       const navLinks = document.querySelectorAll(".nav-link");
@@ -746,6 +712,7 @@ document.addEventListener("DOMContentLoaded", () => {
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
 
